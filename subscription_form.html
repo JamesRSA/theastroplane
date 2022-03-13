@@ -7,6 +7,37 @@
     <link rel="stylesheet" type="text/css" href="subscription_form.css">
   </head>
   <body>
+    <form class="" action="index.html" method="post"> <!--we will have to designate an action which will send
+      the data to a specific place (we will probably have to learn a little bit of SQL so that we can create
+      a database for all subcription members), the method then defines how to execute this action (if I am not
+      mistake) ... -->
+
+      <h1 class="h1">Please fill out the form below so that you can register as a member so that you can
+      enjoy the full potential of what it means to guide yourself through the astroplane using
+      our carefully constructed map!</h1>
+
+      <table class="table">
+
+        <tr>
+          <th>First name:</th>
+          <td><input type="text" name="firstName" id="firstname" onblur="validateFirstName();"></td>
+          <td><span id="firstNamePrompt"></span></td>
+        </tr>
+
+        <tr>
+          <th>Last name:</th>
+          <td><input type="text" name="lastName" id="lastname" onblur="validateLastName();"=""></td>
+          <td><span id="lastNamePrompt"></span></td>
+        </tr>
+
+        <tr>
+          <th>Email adress:</th>
+          <td><input type="text" name="emailadress" id="emailadress" onblur="validateEmail()" > </td>
+          <td><span id="emailPrompt"></span> </td> <!-- Here we need to create function in JS that prevent people submitting
+            incorrect or inappropriate data-->
+        </tr> <!-- We can essentially put as many entry requirements as possible ... for whatever data is required
+        -->
+    </form>
 
   </body>
 </html>
