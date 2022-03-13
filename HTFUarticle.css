@@ -1,0 +1,66 @@
+body {
+  background-color: rgba(240, 255, 255, 0.8); /* note that rgba distinguishes the value of red, green and blue (a value between 0 and 255)
+  and a or alpha refers to the opacity of that colour (a value between 0 and 1).
+  and in this case, the colour is "azure" - whatever the f__k that means*/
+  color: black;
+  text-align: left;
+  font-family: Arial;
+}
+
+h1 {
+  font-size: 300%;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 220%;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 220%;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+.hfit {
+  position: absolute;
+  right: 30%;
+}
+
+h4 {
+  position: left;
+  font-size: 130%;
+  font-family: Lucida Console;
+}
+
+
+.pmarginfit {
+  text-align: justify;
+  font-size: 200%;
+  margin: 20px;
+  width: 80%;
+  position: absolute;
+  right: 10%;
+  top: 33%;
+  height: auto;
+  border: 1px solid black;
+  padding: 2%;
+}
+
+.pqoute {
+  text-align: center;
+  font-size: 120;
+  font-family: Lucida Console;
+  padding: 2%;
+}
+
+.button {
+  font-size: 100%;
+  background-color: inherit;
+  border-color: inherit;
+}
+
+.sidenote {
+  color: red;
+}
