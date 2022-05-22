@@ -1,0 +1,98 @@
+---
+title: 
+output:
+  html_document:
+    df_print: paged
+---
+
+
+
+## HTML notebook
+
+
+The purpose of this notebook is to document useful tools, sources of help, and knowledge that assists with HTML. I'll avoid writing extensively on the conventions of the language, because this will come with practice and unlike a WYSIWYG editor, you can always refer back to your source code if you need to clarify how something is generated, or stackoverflow.
+
+## HTML definitions
+
+```{r echo=FALSE, results='asis'}
+options(knitr.kable.NA = '')
+tab <- data.frame(html_name = as.character(),syntax_example = as.character(),purpose = as.character())
+tab[1,1] <- "element"
+tab[1,2] <- "\\<head> (opens element); <\\\\head> closes element"
+tab[2,1] <- 'attribute'
+tab[2,2] <- '\\<img src="image/path">'
+tab[2,3] <- 'the attribute defines the source of an image in this case. The path is defined in relation to the path of the html file (just like when working in latex). note this is also an empty element. Apparently you can also insert a full URL in place of "image/path". You can add a "width" or "height" element within this to adjust number of pixels. specifying width will automatically scale height to preserve aspect ratio'
+tab[3,1] <- 'doctype declaration'
+tab[3,2] <- '<!DOCTYPE html>'
+tab[3,3] <- 'the doctype bit is information to the browser about what type of information to expect. it is generic and unrelated to html. the html tells it its html'
+tab[4,1] <- 'navigation'
+tab[4,2] <- '\\<nav>'
+tab[4,3] <- 'this element defines the navigation tabs at the top of a webpage'
+tab[5,1] <- 'unordered list'
+tab[5,2] <- '\\<ul>'
+tab[5,3] <- 'this element stands for unordered list giving the list of the tabs that can be navigated under navigation, for example. the other type of html list is ol which is ordered list.'
+tab[6,1] <- 'list item'
+tab[6,2] <- '\\<li>'
+tab[6,3] <- 'list item which specifies the name of the tab that will appear in your list on the webpage. this element can only be used within an ol or ul element'
+tab[7,1] <- 'empty element'
+tab[7,3] <- 'an empty element is an element with no closing tag'
+tab[8,1] <- 'horizontal rule'
+tab[8,2]<- '\\<hr>'
+tab[8,3] <- 'supplies a horizontal line in the webpage'
+tab[9,1] <- 'heading'
+tab[9,2] <- '\\<h1> through to h6'
+tab[9,3] <- 'gives headings of successively smaller sizes'
+tab[10,1] <- 'html entity'
+tab[10,2] <- '&#entity_number'
+tab[10,3] <- 'html entities avoid conflict with html syntax by using numbers to denote special characters. they require the &# to specify the number e.g. &#60 gives you > in the text of the document. there are also names instead of numbers, like lt instead of 60. but if using name, you do not use pound sign. there are entities for things like a play button.'
+tab[11,1] <- 'meaningless elements'
+tab[11,2] <- '\\<div> and \\<span>'
+tab[11,3] <- 'these group together html that either has no meaning or there is no html conventions to describe their meaning. div is a block element, span is inline'
+tab[12,1] <- 'button'
+tab[12,2] <- '\\<button>'
+tab[12,3] <- 'renders a button on the page with desired content specified within the button element. can have a type attribute'
+tab[13,1] <- 'line break'
+tab[13,2] <- '\\<br>'
+tab[13,3] <- 'creates a line break between two elements it is an empty element'
+tab[14,1] <- 'strong tag'
+tab[14,2] <- '\\<strong>'
+tab[14,3] <- 'emphasises a certain bit of text, typically it will render as boldface.'
+tab[15,1] <- 'title'
+tab[15,2] <- '\\<title>'
+tab[15,3] <- 'set the title of the tab of the browser that the page will render on. specified within the head element'
+tab[16,1] <- 'meta'
+tab[16,2] <- '\\<meta>'
+tab[16,3] <- 'set the content description of the webpage. has a name and description attribute. specified within the head element. This is an empty element. The description comes up under the title of the page in search results on a search engine if the page is on a web server.'
+tab[17,1] <- 'anchor tag'
+tab[17,2] <- '\\<a href="file.html" target = "_self"> Link text \\</a>'
+tab[17,3] <- 'insert links to other webpages on your webpage. href refers to "hypertext reference". Like inserting images, the html doc must be in the same folder if not specifying the path, and any path specification is relative to the current html file referencing the other one. You can also insert in place of "file.html" a full URL to any webpage. the "target = "_self" stipulates that the link should open in the current browser tab. the only other value is "_blank" which means it must open in a new tab.'
+tab[18,1] <- 'input'
+tab[18,2] <- '\\<input type = "number" value = "1">'
+tab[18,3] <- 'Allow user of the webpage to input a value, usually number or text. "value" lets you specify what value must appear in the input field on the page. Note this does not lock the value on the page'
+
+
+library(knitr)
+kable(tab, caption = "HTML syntax conventions.")
+```
+
+
+
+## check out
+
+* if using atom, livereload package refreshes automatically the webpage your html code is compiled in with each change. try get this up and running.
+
+## useful hotkeys
+
+```{r echo=FALSE, results='asis'}
+options(knitr.kable.NA = '')
+tab1 <- data.frame(keybinding = as.character(),purpose = as.character(),notes = as.character())
+tab1[1,1] <- "ctlr+shift+i"
+tab1[1,2] <- "execute on a webpage to give you access to the interactive source code"
+library(knitr)
+kable(tab1, caption = "useful keybindings related to html.")
+```
+
+## Sources of great assistance 
+
+* Use w3schools for any questions, you can check css templates there.
+
